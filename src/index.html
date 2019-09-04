@@ -1,13 +1,74 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>TimeRecorder</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1976d2">
 </head>
+
 <body>
+  <header id="header">
+    <div class="logo"><a href="index.html">Time recorder <span>by bNobo</span></a></div>
+    <a href="#menu"><span>Menu</span></a>
+  </header>
+
+  <nav id="menu">
+    <ul class="links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="generic.html">Generic</a></li>
+      <li><a href="elements.html">Elements</a></li>
+    </ul>
+  </nav>
+
+  <section id="banner" class="bg-img" data-bg="banner.jpg">
+    <div class="inner">
+      <header>
+        <h1>Time recorder</h1>
+      </header>
+    </div>
+  </section>
+
   <app-root></app-root>
+
+  <footer id="footer">
+    <ul class="icons">
+      <li><a href="#" class="icon round fa-twitter"><span class="label">Twitter</span></a></li>
+      <li><a href="#" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
+      <li><a href="#" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
+    </ul>
+
+    <div class="copyright">
+        &copy; bNobo
+      </div>
+  </footer>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+
+  <!-- <script>
+  let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+
+  // Show the prompt
+  deferredPrompt.prompt();
+});
+
+
+  </script> -->
 </body>
+
 </html>
