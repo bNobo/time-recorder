@@ -1,0 +1,3 @@
+<input #timerName placeholder="give me a name" [(ngModel)]="label" />
+<button (click)="addTimer(label); label=''"
+        [disabled]="label === ''">Add</button>
