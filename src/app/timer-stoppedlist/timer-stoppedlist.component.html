@@ -1,8 +1,23 @@
-<h2 *ngIf="timers.length">Stopped timers</h2>
-<div *ngFor="let timer of timers">
-    <span>{{timer.label}} - </span>
-    <span>{{timer.duration | date:'HH:mm:ss'}}</span>    
-</div>
 <div *ngIf="timers.length">
-    Total duration = {{timerService.totalDuration | date:"HH:mm:ss"}}
+    <h2>Stopped timers</h2>
+    <article>
+        <table>
+            <tbody>
+                <tr *ngFor="let timer of timers">
+                    <td>{{timer.label}}</td>
+                    <td>{{timer.duration | date:'HH:mm:ss'}}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="1">
+                        Total duration
+                    </td>
+                    <td>{{timerService.totalDuration | date:"HH:mm:ss"}}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </article>
 </div>
+
+<h2 *ngIf="timers.length === 0">No stopped timers yet</h2>

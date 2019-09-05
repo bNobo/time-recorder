@@ -1,3 +1,10 @@
-<input #timerName placeholder="give me a name" [(ngModel)]="label" />
-<button (click)="addTimer(label); label=''"
-        [disabled]="label === ''">Add</button>
+<div class="field">
+    <h2>Add a new timer</h2>
+    <input #timerName placeholder="give me a name" [(ngModel)]="label" type="text" />
+    <ul class="actions">
+        <li>
+            <button (click)="addTimer(label); label=''" [disabled]="label === ''" class="button alt">Add</button>
+        </li>
+        <p *ngIf="isTimerAdded">Scroll down to see running timers</p>
+    </ul>
+</div>

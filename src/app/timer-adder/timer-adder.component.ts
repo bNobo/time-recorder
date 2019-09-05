@@ -10,6 +10,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class TimerAdderComponent implements OnInit {
   @Input() label: string = '';
+  isTimerAdded = false;
    
   constructor(private timerService: TimerService) { }
 
@@ -20,6 +21,7 @@ export class TimerAdderComponent implements OnInit {
     const timer: Timer = new Timer(name);
 
     this.timerService.addTimer(timer)
+      .pipe(tap(_ => this.isTimerAdded = true))
       .subscribe();
   }
 

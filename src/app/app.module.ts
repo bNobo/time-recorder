@@ -7,6 +7,7 @@ import { TimerAdderComponent } from './timer-adder/timer-adder.component';
 import { TimerRunninglistComponent } from './timer-runninglist/timer-runninglist.component';
 import { TimerStoppedlistComponent } from './timer-stoppedlist/timer-stoppedlist.component';
 import { TimeRecorderComponent } from './time-recorder/time-recorder.component';
+import { TripleClicDetectorComponent } from './triple-clic-detector/triple-clic-detector.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TimeRecorderComponent } from './time-recorder/time-recorder.component';
     TimerAdderComponent,
     TimerRunninglistComponent,
     TimerStoppedlistComponent,
-    TimeRecorderComponent
+    TimeRecorderComponent,
+    TripleClicDetectorComponent
   ],
   imports: [
     BrowserModule,

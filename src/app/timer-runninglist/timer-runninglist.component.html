@@ -1,8 +1,17 @@
-<h2 *ngIf="timers.length">Running timers</h2>
-<div *ngFor="let timer of timers">
-    <span *ngIf="environment.production === false">{{timer.id}}: </span>
-    <span>{{timer.label}} - </span>
-    <!-- <span [textContent]="timer.duration | date:'hh:mm:ss'"></span> -->
-    <span>{{timer.duration | date:'HH:mm:ss'}}</span>
-    <button (click)="stopClicked(timer)">Stop</button>
+<div *ngIf="timers.length">
+    <h2>Running timers</h2>
+    <article class="box">
+        <table>
+            <tbody>
+                <tr *ngFor="let timer of timers">
+                    <td>{{timer.label}}</td>
+                    <td>{{timer.duration | date:'HH:mm:ss'}}</td>
+                    <td><button (click)="stopClicked(timer)" class="button alt">Stop</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <span *ngIf="environment.production === false">{{timer.id}}: </span> -->
+
+    </article>
 </div>
+<h2 *ngIf="timers.length === 0">No running timers yet</h2>
