@@ -8,6 +8,8 @@ import { TimerRunninglistComponent } from './timer-runninglist/timer-runninglist
 import { TimerStoppedlistComponent } from './timer-stoppedlist/timer-stoppedlist.component';
 import { TimeRecorderComponent } from './time-recorder/time-recorder.component';
 import { TripleClicDetectorComponent } from './triple-clic-detector/triple-clic-detector.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { TripleClicDetectorComponent } from './triple-clic-detector/triple-clic-
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
