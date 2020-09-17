@@ -126,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "time-recorder"
+    }
+  },
+  "defaultProject": "time-recorder",
+  "cli": {
+    "analytics": "7a87f389-a081-4fb9-91d8-a89869d7f805"
+  }
 }
