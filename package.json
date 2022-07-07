@@ -22,7 +22,7 @@
     "@angular/router": "^10.1.2",
     "@angular/service-worker": "^10.1.2",
     "module": "^1.2.5",
-    "moment": "^2.28.0",
+    "moment": "^2.29.4",
     "rxjs": "~6.6.3",
     "tslib": "^1.13.0",
     "zone.js": "~0.10.3"
